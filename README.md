@@ -1,35 +1,41 @@
 # BSTS-Net
 Code and models from the paper "A Fingerprint-Based Method for Malicious Traffic Detection"
 
-### Dependencies
+# Dependencies
 pip install -r requirements.txt
 
-### Usage
-`#` Due to the large size of dataset, in order to demonstrate the effectiveness of the model, we provide intermediate features extrcted from the patator attack. You need to unzip testData and run it.
-python detect.py
+# Usage
+Due to the large size of dataset, in order to demonstrate the effectiveness of the model, we provide intermediate features extrcted from the patator attack. You need to unzip testData and run it.\
+`python detect.py`
 
-### Train custom models
-## Firstly, you need to use zeek to extract the traffic features, and then train the model.
+
 # Zeek install
-Please visit the zeek website[https://github.com/zeek/zeek] and follow the tutorial for installation. Note: Our script extracts rich application layer protocol information, so please install version 7.0 and above!
-`#` Log extraction.
-zeek -Cr filename.pcap AllFeas.zeek
+Please visit the [zeek](https://github.com/zeek/zeek) website and follow the [tutorial](https://docs.zeek.org/en/master/install.html#building-from-source) for installation. Note: Our script extracts rich application layer protocol information, so please install version 7.0 and above!\
+`#` Log extraction.\
+`zeek -Cr filename.pcap AllFeas.zeek`
 
 # Label flow
-Traffic logs need to be tagged, and we provide code for tagging the CICIDS2017 dataset : LabelDataset.py
+Traffic logs need to be labeled, and we provide code for tagging the CICIDS2017 dataset : LabelDataset.py
 
-# Model Trainning
-`#` traffic fingerprints extract
+# Train custom models
+Firstly, you need to use zeek to extract the traffic features, and then train the model.
+#### traffic fingerprints extract
 Run function `classFlowAndSave`
-`#` assign fingerprints ID
+#### assign fingerprints ID
 Run function `assignIpIDAndSave`
-`#` Sample grouping based on fingerprints
+#### Sample grouping based on fingerprints
 Run function `clusterFlowById`
-`#` construct dataset for SSN
+#### construct dataset for SSN
 Run function `getDataPairByCluster`
-`#` Train SNN
+#### Train SNN
 Run function `train`
-`#` Use the model to calculate sample embeddings
+The below image shows the change of training loss with epoch.
+![loss](https://github.com/user-attachments/assets/3d959c1b-ac21-4cde-8d96-705832c4a1b5) 
+#### Use the model to calculate sample embeddings
 Run function `predict`
-`#` Malicious Traffic Detection
-Run function `clusterIPByTpy`
+#### Malicious Traffic Detection
+Run function `clusterIPByTpy` 
+Performance on the validation set:\
+![image](https://github.com/user-attachments/assets/b0253d8b-238c-4c8b-b319-765d12c4600d)
+
+
