@@ -11,7 +11,7 @@ Due to the large size of dataset, in order to demonstrate the effectiveness of t
 
 # Zeek install
 Please visit the [zeek](https://github.com/zeek/zeek) website and follow the [tutorial](https://docs.zeek.org/en/master/install.html#building-from-source) for installation. Note: Our script extracts rich application layer protocol information, so please install version 7.0 and above!\
-`#` Log extraction.\
+#### Log extraction
 `zeek -Cr filename.pcap AllFeas.zeek`
 
 # Label flow
@@ -29,14 +29,17 @@ Run function `clusterFlowById`
 Run function `getDataPairByCluster`
 #### Train SNN
 Run function `train`
-The below image shows the change of training loss with epoch.
-![image](loss.png)
+The below image shows the change of training loss with epoch.\
+<img src="https://github.com/fuhao23/BSTS-Net/blob/main/loss.png" width="400px">
 #### Use the model to calculate sample embeddings
 Run function `predict`
 #### Malicious Traffic Detection
 Run function `clusterIPByTpy` 
 Performance on the validation set:\
-<img src="https://github.com/fuhao23/BSTS-Net/blob/main/loss.png" width="50px">
+![image](https://github.com/user-attachments/assets/966f1f97-dab3-4ecc-8422-6a290cd72d3e)
+Distributionson the partial validation sets:\
+<img src="https://github.com/fuhao23/BSTS-Net/blob/main/data%20distribution.png" width="400px">
+
 
 
 
