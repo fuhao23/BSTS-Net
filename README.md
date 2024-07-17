@@ -10,7 +10,7 @@ Due to the large size of dataset, in order to demonstrate the effectiveness of t
 
 
 # Zeek install
-Please visit the [zeek](https://github.com/zeek/zeek) website and follow the [tutorial](https://docs.zeek.org/en/master/install.html#building-from-source) for installation. Note: Our script extracts rich application layer protocol information, so please install version 7.0 and above!\
+Please visit the [zeek](https://github.com/zeek/zeek) website and follow the [tutorial](https://docs.zeek.org/en/master/install.html#building-from-source) for installation. Note: Our script extracts rich application layer protocol information, so please install version 7.0 and above!
 #### Log extraction
 `zeek -Cr filename.pcap AllFeas.zeek`
 
