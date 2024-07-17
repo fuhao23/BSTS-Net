@@ -33,12 +33,13 @@ The below image shows the change of training loss with epoch.\
 <img src="https://github.com/fuhao23/BSTS-Net/blob/main/loss.png" width="400px">
 #### Use the model to calculate sample embeddings
 Run function `predict`
+Distributionson the partial validation sets:\
+<img src="https://github.com/fuhao23/BSTS-Net/blob/main/data%20distribution.png" width="400px">
 #### Malicious Traffic Detection
 Run function `clusterIPByTpy` 
 Performance on the validation set:\
 ![image](https://github.com/user-attachments/assets/966f1f97-dab3-4ecc-8422-6a290cd72d3e)
-Distributionson the partial validation sets:\
-<img src="https://github.com/fuhao23/BSTS-Net/blob/main/data%20distribution.png" width="400px">
+
 
 
 
