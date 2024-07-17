@@ -30,12 +30,13 @@ Run function `getDataPairByCluster`
 #### Train SNN
 Run function `train`
 The below image shows the change of training loss with epoch.
-![loss](https://github.com/user-attachments/assets/3d959c1b-ac21-4cde-8d96-705832c4a1b5) 
+![image](loss.png)
 #### Use the model to calculate sample embeddings
 Run function `predict`
 #### Malicious Traffic Detection
 Run function `clusterIPByTpy` 
 Performance on the validation set:\
-![image](https://github.com/user-attachments/assets/b0253d8b-238c-4c8b-b319-765d12c4600d)
+<img src="https://github.com/fuhao23/BSTS-Net/blob/main/loss.png" width="50px">
+
 
 
